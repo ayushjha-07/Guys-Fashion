@@ -1,0 +1,106 @@
+/* Men's Section - Professional Design */
+
+.men-section {
+  min-height: 100vh;
+}
+
+/* Hero Banner */
+.men-hero {
+  height: 500px;
+  background: linear-gradient(rgba(200, 230, 230, 0.9), rgba(200, 230, 230, 0.9)),
+              url('https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=1600') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.men-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.men-hero-content p {
+  font-size: 1.3rem;
+  color: #6B6B6B;
+  margin-bottom: 2rem;
+}
+
+/* Category Tabs */
+.men-categories {
+  padding: 3rem 0;
+  background: #ffffff;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+/* Featured Categories */
+.men-featured {
+  padding: 5rem 0;
+  background: #F5F5F5;
+}
+
+/* Products Section */
+.men-products {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+/* Promo Banner */
+.men-promo {
+  height: 400px;
+  background: linear-gradient(rgba(200, 230, 230, 0.95), rgba(200, 230, 230, 0.95)),
+              url('https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=1600') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .men-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .men-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-content h2 {
+    font-size: 2rem;
+  }
+}

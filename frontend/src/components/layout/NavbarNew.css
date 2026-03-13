@@ -1,0 +1,324 @@
+/* Navbar - Professional Design (Colorlib Style) */
+
+.navbar-new {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container-new {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-content: initial;
+  gap: 12px;
+  height: 80px;
+}
+
+/* Logo */
+.nav-logo-new {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--dark);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color var(--transition-base);
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: min(30vw, 320px);
+}
+
+.nav-logo-new:hover {
+  color: var(--primary-hover);
+}
+
+/* Main Menu */
+.nav-menu-new {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+  justify-self: center;
+}
+
+.nav-link-new {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color var(--transition-base);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link-new::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--dark);
+  transition: width var(--transition-base);
+}
+
+.nav-link-new:hover {
+  color: var(--primary-hover);
+}
+
+.nav-link-new:hover::after {
+  width: 100%;
+}
+
+/* Right Side */
+.nav-right-new {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+/* Search Bar */
+.nav-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-search input {
+  width: 300px;
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  transition: all var(--transition-base);
+}
+
+.nav-search input:focus {
+  outline: none;
+  border-color: var(--dark);
+  box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.1);
+}
+
+.search-btn {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color var(--transition-base);
+}
+
+.search-btn:hover {
+  color: var(--dark);
+}
+
+/* User Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-user-text {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.nav-user-text:hover {
+  color: var(--dark);
+}
+
+.nav-icon-new {
+  position: relative;
+  color: var(--dark);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.nav-icon-new:hover {
+  color: var(--primary-hover);
+}
+
+.icon-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--dark);
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-full);
+  min-width: 18px;
+  text-align: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #E53935;
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-full);
+  min-width: 18px;
+  text-align: center;
+}
+
+.logout-btn-new {
+  background: var(--dark);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.logout-btn-new:hover {
+  background: var(--primary-hover);
+}
+
+/* Mobile Hamburger */
+.hamburger-new {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger-new span {
+  width: 25px;
+  height: 2px;
+  background: var(--dark);
+  transition: all var(--transition-base);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .nav-search {
+    display: none;
+  }
+
+  .nav-menu-new { gap: 1.25rem; }
+  .nav-logo-new {
+    font-size: 1.8rem;
+    max-width: min(28vw, 280px);
+  }
+  .nav-link-new { font-size: 0.85rem; padding: 0.4rem 0; }
+  .nav-right-new { gap: 1rem; }
+}
+
+@media (max-width: 992px) {
+  .nav-search { display: none; }
+  .hamburger-new { display: flex; }
+  .nav-menu-new {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--white);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 1.25rem;
+    transition: left var(--transition-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .nav-menu-new.active { left: 0; }
+  .nav-link-new { width: 100%; padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
+  .nav-right-new { gap: 0.8rem; }
+  .nav-logo-new { font-size: 1.6rem; max-width: min(36vw, 280px); }
+}
+
+@media (max-width: 768px) {
+  .hamburger-new {
+    display: flex;
+  }
+
+  .nav-menu-new {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--white);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: left var(--transition-base);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu-new.active {
+    left: 0;
+  }
+
+  .nav-link-new {
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-right-new {
+    gap: 1rem;
+  }
+
+  .nav-user-text {
+    display: none;
+  }
+
+  .logout-btn-new {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container-new {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .nav-logo-new {
+    font-size: 1.4rem;
+    max-width: 60vw;
+  }
+
+  .nav-actions {
+    gap: 0.8rem;
+  }
+
+  .nav-icon-new {
+    font-size: 1.1rem;
+  }
+}

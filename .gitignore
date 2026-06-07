@@ -215,3 +215,7 @@ dist/
 # Temporary files
 tmp/
 temp/
+
+# Duplicate / old project folder
+guys-fashion/
+
